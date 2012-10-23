@@ -1,0 +1,17 @@
+
+.redcar
+# Xcode
+.DS_Store
+
+xcuserdata
+
+*.swp
+*~.nib
+
+*.zargo~
+build/
+
+*.pbxuser
+*.perspective
+*.perspectivev3
+Pods

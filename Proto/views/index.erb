@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport"
+            content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Tracker Poker</title>
+ 
+    <!-- stylesheet will go here -->
+ 
+    <!-- dojo/javascript will go here -->
+    <script src="javascripts/dojo/dojo.js"
+    data-dojo-config="async:true"></script>
+    <script >
+          // Load the widget parser and mobile base
+      require(["dojox/mobile/parser", 
+               "dojox/mobile/deviceTheme",
+               "dojox/mobile/compat",
+               "dojox/mobile/Button",
+               "dojox/mobile/TextBox",
+               "dojox/mobile"],
+          function(parser, deviceTheme) {
+       
+              // Parse the page for widgets!
+              parser.parse();
+       
+          }
+      );
+    </script>
+    </head>
+    <body>
+ 
+    <!-- application will go here -->
+      <!-- the view or "page"; select it as the "home" screen -->
+<div id="home" data-dojo-type="dojox.mobile.View" data-dojo-props="selected: true">
+ 
+    <!-- a sample heading -->
+    <h1 data-dojo-type="dojox.mobile.Heading">Tracker Poker</h1>
+ 
+    <!-- a rounded rectangle list container -->
+    <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
+ 
+        <!-- list item with an icon containing a switch -->
+        <li data-dojo-type="dojox.mobile.ListItem" 
+            data-dojo-props="moveTo: 'board'">
+            Play locally
+            
+        </li>
+        <li data-dojo-type="dojox.mobile.ListItem"
+              data-dojo-props="moveTo: 'room'">
+            Play with distributed team
+        </li>
+        
+    </ul>
+</div>
+<div id="board" data-dojo-type="dojox.mobile.View">
+    <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props="back:'Home', moveTo:'home'">
+            Score for Story
+    </h1>
+    <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
+        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="moveTo:'card'">
+            0
+        </li>
+        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="moveTo:'card'">
+            1
+        </li>
+        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="moveTo:'card'">
+            2
+        </li>
+        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="moveTo:'card'">
+            3
+        </li>
+        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="moveTo:'card'">
+            5
+        </li>
+        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="moveTo:'card'">
+            8
+        </li>
+        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="moveTo:'card'">
+            13
+        </li>
+        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="moveTo:'card'">
+            20
+        </li>
+        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="moveTo:'card'">
+            40
+        </li>
+        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="moveTo:'card'">
+            100
+        </li>
+        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="moveTo:'card'">
+            Infinity
+        </li>
+        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="moveTo:'card'">
+            Unknown
+        </li>
+        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="moveTo:'card'">
+            Break
+        </li>
+    </ul>
+</div>
+ 
+<div id="room" data-dojo-type="dojox.mobile.View">
+    <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props="back:'Home', moveTo:'home'">
+            Room
+    </h1>
+    <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
+        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="moveTo:'login'">
+            Not logged in
+        </li>
+        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="moveTo:'scan'">
+            Enter or Scan Room
+        </li>
+        <li data-dojo-type="dojox.mobile.ListItem" data-dojo-props="moveTo:'board'">
+            Join Game
+        </li>
+    </ul>
+</div>
+<div id="card" data-dojo-type="dojox.mobile.View">
+    <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props="back:'Story', moveTo:'board'">
+            Card
+    </h1>
+    
+</div>
+<div id="login" data-dojo-type="dojox.mobile.View">
+    <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props="back:'Room', moveTo:'room'">
+            Sign In
+    </h1>
+    
+    <input data-dojo-type="dojox.mobile.TextBox" data-dojo-props="placeHolder:'Email:'" />
+    <input data-dojo-type="dojox.mobile.TextBox" placeHolder="Password" />
+    <button data-dojo-type="dojox.mobile.Button" >Sign-in</button>
+    
+</div>
+    </body>
+</html>
