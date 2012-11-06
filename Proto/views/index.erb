@@ -39,7 +39,10 @@
  
     <!-- a rounded rectangle list container -->
     <ul data-dojo-type="dojox.mobile.EdgeToEdgeList">
- 
+      <li data-dojo-type="dojox.mobile.ListItem" style="height:300px">
+            <img src="images/ic_launcher-web.png" width=300 height=300>
+            
+        </li>
         <!-- list item with an icon containing a switch -->
         <li data-dojo-type="dojox.mobile.ListItem" 
             data-dojo-props="moveTo: 'board'">
@@ -126,11 +129,11 @@
     <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props="back:'Room', moveTo:'room'">
             Sign In
     </h1>
-    
-    <input data-dojo-type="dojox.mobile.TextBox" data-dojo-props="placeHolder:'Email:'" />
-    <input data-dojo-type="dojox.mobile.TextBox" placeHolder="Password" />
-    <button data-dojo-type="dojox.mobile.Button" >Sign-in</button>
-    
+    <div align='center'>
+      <input data-dojo-type="dojox.mobile.TextBox" data-dojo-props="placeHolder:'Email:'" style="width:95%" />
+      <input data-dojo-type="dojox.mobile.TextBox" placeHolder="Password" style="width:95%" />
+      <button data-dojo-type="dojox.mobile.Button" style="width:95%" >Sign-in</button>
+    </div
 </div>
     </body>
 </html>
