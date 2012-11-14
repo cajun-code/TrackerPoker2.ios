@@ -130,10 +130,20 @@
             Sign In
     </h1>
     <div align='center'>
-      <input data-dojo-type="dojox.mobile.TextBox" data-dojo-props="placeHolder:'Email:'" style="width:95%" />
-      <input data-dojo-type="dojox.mobile.TextBox" placeHolder="Password" style="width:95%" />
-      <button data-dojo-type="dojox.mobile.Button" style="width:95%" >Sign-in</button>
-    </div
+      <input data-dojo-type="dojox.mobile.TextBox" data-dojo-props="placeHolder:'Email:'" style="width:95%; padding:10" />
+      <input data-dojo-type="dojox.mobile.TextBox" placeHolder="Password" style="width:95%; padding:10" />
+      <button data-dojo-type="dojox.mobile.Button" style="width:95%;padding:10" >Sign-in</button>
+    </div>
+</div>
+
+<div id="scan" data-dojo-type="dojox.mobile.View">
+    <h1 data-dojo-type="dojox.mobile.Heading" data-dojo-props="back:'Room', moveTo:'room'">
+            Enter or Scan Room Code
+    </h1>
+    <div align='center'>
+      <input data-dojo-type="dojox.mobile.TextBox" data-dojo-props="placeHolder:'Room Number:'" style="width:95%; padding:10" />
+      <button data-dojo-type="dojox.mobile.Button" style="width:95%;padding:10" >Scan</button>
+    </div>
 </div>
     </body>
 </html>
