@@ -50,5 +50,17 @@
     return cell;
     
 }
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self performSegueWithIdentifier:@"showCard" sender:self];
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    UIViewController *controller = (UIViewController*)segue.destinationViewController;
+    if ([controller respondsToSelector:@selector(setCard:)]) {
+        int pos = self.tableView.indexPathForSelectedRow.row;
+        NSString *string = [self.scale[pos] stringValue];
+        [controller performSelector:@selector(setCard:) withObject:string];
+    }
+}
 
 @end
