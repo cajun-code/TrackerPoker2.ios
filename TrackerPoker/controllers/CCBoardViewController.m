@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.scale = @[@0,@1,@2,@3,@5,@8,@13,@20,@40,@100];
+    self.scale = @[@"0",@"1",@"2",@"3",@"5",@"8",@"13",@"20",@"40",@"100",@"infinity", @"unknown", @"break"];
     [self.tableView reloadData];
 }
 
@@ -45,7 +45,7 @@
 }
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"pointCell"];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", [self.scale[indexPath.row] stringValue]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", self.scale[indexPath.row] ];
     
     return cell;
     
@@ -58,7 +58,7 @@
     UIViewController *controller = (UIViewController*)segue.destinationViewController;
     if ([controller respondsToSelector:@selector(setCard:)]) {
         int pos = self.tableView.indexPathForSelectedRow.row;
-        NSString *string = [self.scale[pos] stringValue];
+        NSString *string = self.scale[pos] ;
         [controller performSelector:@selector(setCard:) withObject:string];
     }
 }

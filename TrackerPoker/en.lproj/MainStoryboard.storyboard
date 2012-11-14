@@ -49,48 +49,37 @@
                     <navigationItem key="navigationItem" id="EAC-4b-Cxp"/>
                     <connections>
                         <outlet property="tableView" destination="1Xc-Vu-61E" id="GAj-Xd-9wm"/>
-                        <segue destination="Duc-Ud-cGi" kind="modal" identifier="showCard" modalTransitionStyle="flipHorizontal" id="D0S-RX-d2R"/>
+                        <segue destination="Duc-Ud-cGi" kind="push" identifier="showCard" id="D0S-RX-d2R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gzt-Jq-kJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="212" y="-553"/>
         </scene>
-        <!--Card View Controller-->
+        <!--Card View Controller - Title-->
         <scene sceneID="hsO-8W-lHQ">
             <objects>
                 <viewController id="Duc-Ud-cGi" customClass="CCCardViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zo2-WT-BuG">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dkm-z2-86Z"/>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ywn-T5-l3R">
-                                <items>
-                                    <navigationItem id="5Ua-qi-taM">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ouW-N4-44q">
-                                            <connections>
-                                                <action selector="closeCard:" destination="Duc-Ud-cGi" id="iIi-9Q-AVX"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dkm-z2-86Z">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="504" id="I6l-CZ-GxN"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Dkm-z2-86Z" firstAttribute="top" secondItem="Ywn-T5-l3R" secondAttribute="bottom" type="default" id="9xF-iY-0yx"/>
-                            <constraint firstItem="Ywn-T5-l3R" firstAttribute="leading" secondItem="Zo2-WT-BuG" secondAttribute="leading" type="default" id="KaZ-Gd-kps"/>
                             <constraint firstItem="Dkm-z2-86Z" firstAttribute="leading" secondItem="Zo2-WT-BuG" secondAttribute="leading" type="default" id="ZMy-fh-j0N"/>
                             <constraint firstItem="Dkm-z2-86Z" firstAttribute="trailing" secondItem="Zo2-WT-BuG" secondAttribute="trailing" type="default" id="g55-VO-RzT"/>
                             <constraint firstItem="Dkm-z2-86Z" firstAttribute="bottom" secondItem="Zo2-WT-BuG" secondAttribute="bottom" type="default" id="gAk-iv-s3g"/>
-                            <constraint firstItem="Ywn-T5-l3R" firstAttribute="top" secondItem="Zo2-WT-BuG" secondAttribute="top" type="default" id="mzb-Xr-VNB"/>
-                            <constraint firstItem="Ywn-T5-l3R" firstAttribute="trailing" secondItem="Zo2-WT-BuG" secondAttribute="trailing" type="default" id="sW9-Ug-KwI"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="FYv-Qs-jNm"/>
                     <connections>
                         <outlet property="image" destination="Dkm-z2-86Z" id="29p-dP-t99"/>
-                        <outlet property="navBar" destination="Ywn-T5-l3R" id="5ag-gy-zTk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dfv-T5-gbp" userLabel="First Responder" sceneMemberID="firstResponder"/>

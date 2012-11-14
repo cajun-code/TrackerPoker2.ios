@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.navBar.topItem.title = self.card;
+    self.navigationItem.title = self.card;
     NSString *imageName = [NSString stringWithFormat:@"%@.png", self.card];
     //self.image.image = [UIImage imageWithContentsOfFile:imageName];
     self.image.image = [UIImage imageNamed:imageName];
